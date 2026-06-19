@@ -19,4 +19,4 @@ python executar_melhorias.py --linhas 60 --colunas 60 --geracoes 30 --fake-news 
 
 ## Observação importante
 
-O modelo estendido altera as regras originais, portanto ele é usado como demonstração de inovação. A comparação de desempenho entre sequencial, paralela e distribuída deve continuar usando o modelo principal, para preservar a equivalência lógica entre as três versões.
+O modelo estendido altera as regras originais, portanto ele é usado como demonstração de inovação. A comparação de desempenho entre sequencial, paralela e distribuída continua usando o modelo principal, para preservar a equivalência lógica entre as três versões.
