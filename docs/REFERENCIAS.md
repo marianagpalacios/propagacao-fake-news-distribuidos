@@ -16,7 +16,6 @@ VOSOUGHI, S.; ROY, D.; ARAL, S. The Spread of True and False News Online. *Scien
 
 LAZER, D. M. J.; BAUM, M. A.; BENKLER, Y.; BERINSKY, A. J.; GREENHILL, K. M.; MENCZER, F.; METZGER, M. J.; NYHAN, B.; PENNYCOOK, G.; ROTHSCHILD, D.; SCHUDSON, M.; SLOMAN, S. A.; SUNSTEIN, C. R.; THORSON, E. A.; WATTS, D. J.; ZITTRAIN, J. L. The Science of Fake News. *Science*, v. 359, n. 6380, p. 1094-1096, 2018. DOI: 10.1126/science.aao2998.
 
-FRIGGERI, A.; ADAMIC, L. A.; ECKLES, D.; CHENG, J. Rumor Cascades. *Proceedings of the International AAAI Conference on Web and Social Media*, v. 8, n. 1, p. 101-110, 2014. DOI: 10.1609/icwsm.v8i1.14559.
 
 ## Declaração de uso de IA generativa
 
