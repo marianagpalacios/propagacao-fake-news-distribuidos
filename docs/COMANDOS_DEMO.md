@@ -6,7 +6,7 @@
 python validar_equivalencia.py --linhas 80 --colunas 80 --geracoes 25 --threads 4 --workers 2 --inventores 1
 ```
 
-Mostre no terminal a mensagem:
+Mostrar no terminal a mensagem:
 
 ```text
 OK: as três versões produziram exatamente a mesma matriz final.
