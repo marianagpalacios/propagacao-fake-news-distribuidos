@@ -70,14 +70,6 @@ def proxima_geracao_distribuida(
     limiar_convencimento: int,
     workers: list[WorkerConfig],
 ) -> Grade:
-    """
-    Calcula uma geração distribuindo blocos de linhas para os workers.
-
-    Para consistência, todos os blocos são calculados a partir da mesma matriz
-    antiga. As fronteiras são sincronizadas por halo rows: o worker recebe uma
-    linha extra superior e/ou inferior quando o bloco possui vizinhos fora da
-    sua faixa principal.
-    """
     intervalos = dividir_intervalos(len(grade), len(workers))
     resultados: list[list[list[int]] | None] = [None for _ in intervalos]
     erros: list[BaseException] = []
