@@ -73,8 +73,7 @@ def criar_grade_extendida(config: ConfigExtensoes) -> GradeExtendida:
     todas_posicoes = [(i, j) for i in range(config.linhas) for j in range(config.colunas)]
     posicoes_ocupadas: set[Posicao] = set()
 
-    # Melhoria 1: Inventores da fake news. Cada fake news recebe ao menos uma
-    # fonte original persistente.
+    # Melhoria 1: Inventores da fake news. Cada fake news recebe ao menos uma fonte original persistente.
     for fake_id in range(1, config.quantidade_fake_news + 1):
         for _ in range(config.inventores_por_fake):
             posicao = sortear_posicao_livre(rng, todas_posicoes, posicoes_ocupadas)
@@ -85,7 +84,6 @@ def criar_grade_extendida(config: ConfigExtensoes) -> GradeExtendida:
     total_celulas = config.linhas * config.colunas
     total_espalhadores = int(total_celulas * config.percentual_espalhadores)
 
-    # Espalhadores iniciais são distribuídos entre as fake news existentes.
     for _ in range(total_espalhadores):
         posicao = sortear_posicao_livre(rng, todas_posicoes, posicoes_ocupadas)
         posicoes_ocupadas.add(posicao)
@@ -203,8 +201,7 @@ def proxima_geracao_extendida(
                 pressao = pressao_por_fake(grade, i, j, influenciadores, config.peso_influenciador)
                 fake_id, valor_pressao = escolher_fake_dominante(pressao)
 
-                # Melhoria 4: bots podem iniciar propagação mesmo com baixa
-                # pressão local. A fake associada ao bot é sorteada.
+                # Melhoria 4: bots podem iniciar propagação mesmo com baixa pressão local. A fake associada ao bot é sorteada.
                 if (i, j) in bots and rng.random() < config.probabilidade_bot:
                     fake_bot = rng.randint(1, config.quantidade_fake_news)
                     nova[i][j] = Celula(ESPALHADOR, fake_bot)
@@ -214,14 +211,12 @@ def proxima_geracao_extendida(
                     nova[i][j] = Celula(IGNORANTE, None)
                     continue
 
-                # Melhorias 2 e 6: probabilidade por fake news ajustada pela
-                # resistência individual da pessoa.
+                # Melhorias 2 e 6: probabilidade por fake news ajustada pela resistência individual da pessoa.
                 probabilidade = probabilidades_fake[fake_id] * (1.0 - resistencia[i][j])
                 nova[i][j] = Celula(ESPALHADOR, fake_id) if rng.random() < probabilidade else Celula(IGNORANTE, None)
 
             elif atual.tipo == ESPALHADOR:
-                # Melhoria 3: influenciadores e bots tendem a permanecer
-                # espalhando por mais tempo que pessoas comuns.
+                # Melhoria 3: influenciadores e bots tendem a permanecer espalhando por mais tempo que pessoas comuns.
                 if (i, j) in bots and rng.random() < 0.90:
                     nova[i][j] = atual
                 elif (i, j) in influenciadores and rng.random() < 0.65:
