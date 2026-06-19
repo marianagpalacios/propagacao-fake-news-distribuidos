@@ -15,8 +15,6 @@
 6. Python Software Foundation. **socket — Low-level networking interface**. Documentação oficial do Python.
 7. Python Software Foundation. **pickle — Python object serialization**. Documentação oficial do Python.
 
-## Como citar o uso de IA generativa
-
-Como o enunciado permite IA como apoio, mas exige compreensão e referência, use algo como:
+## Uso de IA generativa
 
 > O grupo utilizou IA generativa como apoio para revisão, organização do código, documentação e sugestões de análise experimental. Todas as decisões de implementação foram revisadas, testadas e compreendidas pelos integrantes.
