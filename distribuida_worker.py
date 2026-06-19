@@ -11,7 +11,6 @@ from socket_utils import enviar_objeto, receber_objeto
 
 
 def contar_vizinhos_local(bloco: Sequence[Sequence[int]], i: int, j: int) -> int:
-    """Conta vizinhos dentro de um bloco que já contém as linhas de fronteira."""
     linhas = len(bloco)
     colunas = len(bloco[0])
     total = 0
@@ -39,15 +38,7 @@ def calcular_estado_local(bloco: Sequence[Sequence[int]], i: int, j: int, limiar
 
 
 def processar_bloco(tarefa: dict) -> Grade:
-    """
-    Processa somente as linhas reais do bloco recebido.
-
-    O master envia:
-    - bloco: fatia da matriz com, no máximo, uma linha extra superior e uma
-      linha extra inferior;
-    - linhas_reais: quantas linhas centrais devem voltar para o master;
-    - possui_halo_superior: indica se a primeira linha do bloco é fronteira.
-    """
+  
     bloco: Grade = tarefa["bloco"]
     limiar: int = tarefa["limiar_convencimento"]
     linhas_reais: int = tarefa["linhas_reais"]
