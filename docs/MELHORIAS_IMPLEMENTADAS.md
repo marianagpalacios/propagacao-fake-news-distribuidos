@@ -1,6 +1,6 @@
 # Melhorias e extensões implementadas
 
-O enunciado indica que melhorias e extensões podem diferenciar o trabalho. Foram implementadas 6 melhorias explícitas no arquivo `modelo_extendido.py`.
+O enunciado da atividade indica que melhorias e extensões podem diferenciar o trabalho. Foram implementadas 6 melhorias explícitas no arquivo `modelo_extendido.py`.
 
 | Nº | Melhoria | Justificativa técnica | Onde aparece no código |
 |---:|---|---|---|
