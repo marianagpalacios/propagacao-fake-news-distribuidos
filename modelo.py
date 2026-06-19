@@ -223,9 +223,6 @@ def executar_loop_simulacao(
         if mostrar:
             print(formatar_linha_contagem(geracao, contagem))
 
-        # A simulação pode parar quando não há espalhadores comuns e também
-        # não existe ignorante que possa ser convencido na próxima geração.
-        # Isso evita rodar gerações estáveis quando resta apenas o inventor.
         if contagem[ESPALHADOR] == 0 and not existe_potencial_propagacao(grade, limiar_convencimento):
             if mostrar:
                 print("\nA propagação terminou: não há novos indivíduos que possam ser convencidos.")
